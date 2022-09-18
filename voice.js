@@ -1,4 +1,4 @@
-const URL = 'voice.php';
+const URL = 'localhost:8888';
 let div = document.createElement('div');
 div.id = 'messages';
 let start = document.createElement('button');
