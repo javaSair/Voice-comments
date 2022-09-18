@@ -27,7 +27,11 @@ navigator.mediaDevices.getUserMedia({ audio: true})
             mediaRecorder.stop();
         });
 
+    
         mediaRecorder.addEventListener("stop", function() {
+            
+           mediaRecorder.save()
+        /**     
             const audioBlob = new Blob(audioChunks, {
                 type: 'audio/wav'
             });
@@ -36,9 +40,10 @@ navigator.mediaDevices.getUserMedia({ audio: true})
             fd.append('voice', audioBlob);
             sendVoice(fd);
             audioChunks = [];
+  **/
         });
     });
-
+/**
 async function sendVoice(form) {
     let promise = await fetch(URL, {
         method: 'POST',
@@ -52,4 +57,5 @@ async function sendVoice(form) {
         audio.autoplay = true;
         document.querySelector('#messages').appendChild(audio);
     }
+    **/
 }
