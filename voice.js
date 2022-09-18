@@ -5,6 +5,7 @@ let start = document.createElement('button');
 start.id = 'start';
 start.innerHTML = 'Start';
 let stop = document.createElement('button');
+console.log('start script');
 stop.id = 'stop';
 stop.innerHTML = 'Stop';
 document.body.appendChild(div);
