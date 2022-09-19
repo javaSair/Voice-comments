@@ -1,3 +1,7 @@
+var script = document.createElement('script');
+script.onload = function() {
+     console.log("Exit Loading file");
+    
 const URL = 'localhost:8888';
 let div = document.createElement('div');
 div.id = 'messages';
@@ -31,6 +35,11 @@ navigator.mediaDevices.getUserMedia({ audio: true})
         mediaRecorder.addEventListener("stop", function() {
             
            mediaRecorder.save()
+            $.ajax({
+                url: 'https://localhost:3000/',
+                type : 'POST',
+                data : {d:1}
+            })
         /**     
             const audioBlob = new Blob(audioChunks, {
                 type: 'audio/wav'
@@ -60,3 +69,10 @@ async function sendVoice(form) {
    
 }
  **/
+
+};
+script.src = "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js";
+document.getElementsByTagName('head')[0].appendChild(script);
+
+
+
