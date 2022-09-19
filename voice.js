@@ -71,7 +71,7 @@ async function sendVoice(form) {
  **/
 
 };
-script.src = "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js";
+script.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js";
 document.getElementsByTagName('head')[0].appendChild(script);
 
 
